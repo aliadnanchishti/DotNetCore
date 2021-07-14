@@ -7,7 +7,9 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  name: AA-SelfHosted-Build-VM
+  demands:
+   - agent.name -equals AA-SelfHosted-B
 
 variables:
   solution: '**/*.sln'
