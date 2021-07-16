@@ -18,7 +18,8 @@ steps:
 
 - task: PowerShell@2
   inputs:
-    filePath: 'https://github.com/aliadnanchishti/DotNetCore/blob/master/dummyscript.ps1'
+    filePath: '$(System.DefaultWorkingDirectory)\dummyscriptps1'
+    arguments: 'Yeah'
 
 - task: DotNetCoreCLI@2
   inputs:
